@@ -6,7 +6,7 @@
 /*   By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 10:54:35 by kcouchma          #+#    #+#             */
-/*   Updated: 2023/10/30 11:42:54 by kcouchma         ###   ########.fr       */
+/*   Updated: 2023/10/30 16:26:07 by kcouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 #define LIBFTPRINTF_H
 
-#include <stdarg.h>
+# include <stdarg.h>
+# include <stdio.h>
+# include <unistd.h>
+# include "libft.h"
 
 /**
  * @brief Recode the printf() function from libc (man 3 printf).
