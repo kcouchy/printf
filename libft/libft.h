@@ -6,7 +6,7 @@
 /*   By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:45:14 by kcouchma          #+#    #+#             */
-/*   Updated: 2023/10/25 17:08:29 by kcouchma         ###   ########.fr       */
+/*   Updated: 2023/11/02 15:13:04 by kcouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -329,15 +329,17 @@ void	*ft_calloc(size_t nmemb, size_t size);
  * @brief Outputs the character ’c’ to the given file descriptor.
  * @param c The character to output.
  * @param fd The file descriptor on which to write.
+ * @return Returns 1 (no. of characters written)
  */
-void	ft_putchar_fd(char c, int fd);
+int	ft_putchar_fd(char c, int fd);
 
 /**
  * @brief Outputs the string ’s’ to the given file descriptor.
  * @param s The string to output.
  * @param fd The file descriptor on which to write.
+ * @return Returns the number of characters written (ft_strlen(s)).
  */
-void	ft_putstr_fd(char *s, int fd);
+int	ft_putstr_fd(char *s, int fd);
 
 /**
  * @brief Outputs the string ’s’ to the given file descriptor followed by a 
@@ -349,8 +351,16 @@ void	ft_putendl_fd(char *s, int fd);
 
 /**
  * @brief Outputs the integer ’n’ to the given file descriptor.
+ * @
  */
-void	ft_putnbr_fd(int n, int fd);
+
+/**
+ * @brief Outputs the integer ’n’ to the given file descriptor.
+ * @param n Input int
+ * @param fd The file descriptor on which to write.
+ * @return int Returns the number of characters written.
+ */
+int	ft_putnbr_fd(int n, int fd);
 
 /******************************************************************************/
 /* Bonus                                                                      */

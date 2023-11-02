@@ -1,33 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putbase.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 13:00:52 by kcouchma          #+#    #+#             */
-/*   Updated: 2023/11/02 15:56:35 by kcouchma         ###   ########.fr       */
+/*   Created: 2023/11/02 13:28:26 by kcouchma          #+#    #+#             */
+/*   Updated: 2023/11/02 15:58:10 by kcouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "libftprintf.h"
 
-int	ft_putnbr_fd(int n, int fd)
+int	ft_putbase(size_t n, char *base, int fd)
 {
-	char		c;
-	long		n_long;
+	char	c;
+	size_t	base_len;
 	static int	count;
 
-	n_long = n;
-	if (n_long < 0)
+	count = 0;
+	base_len = ft_strlen(base);
+	if (n > base_len)
 	{
-		write(fd, "-", 1);
-		n_long = -n_long;
+		ft_putbase(n / base_len, base, fd);
 	}
-	if (n_long >= 10)
-		ft_putnbr_fd(n_long / 10, fd);
-	c = n_long % 10 + '0';
+	c = base[n % base_len];
 	count++;
 	write(fd, &c, 1);
-	return (count);
+	return ((int)count);
 }
+
+// int	main(void)
+// {
+// 	printf("\n%u\n", (ft_putbase(6, "0123456789ABCDEF", 1)));
+// 	printf("\n%u", (ft_putbase(14257, "0123456789ABCDEF", 1)));
+// 	return (0);
+// }

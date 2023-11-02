@@ -6,13 +6,14 @@
 /*   By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 11:57:15 by kcouchma          #+#    #+#             */
-/*   Updated: 2023/10/24 12:55:46 by kcouchma         ###   ########.fr       */
+/*   Updated: 2023/11/02 15:13:31 by kcouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
 	write(fd, s, ft_strlen(s));
+	return (ft_strlen(s));
 }
