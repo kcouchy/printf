@@ -6,7 +6,7 @@
 /*   By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:45:14 by kcouchma          #+#    #+#             */
-/*   Updated: 2023/11/02 15:13:04 by kcouchma         ###   ########.fr       */
+/*   Updated: 2023/11/02 16:44:00 by kcouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -331,7 +331,7 @@ void	*ft_calloc(size_t nmemb, size_t size);
  * @param fd The file descriptor on which to write.
  * @return Returns 1 (no. of characters written)
  */
-int	ft_putchar_fd(char c, int fd);
+int		ft_putchar_fd(char c, int fd);
 
 /**
  * @brief Outputs the string ’s’ to the given file descriptor.
@@ -339,7 +339,7 @@ int	ft_putchar_fd(char c, int fd);
  * @param fd The file descriptor on which to write.
  * @return Returns the number of characters written (ft_strlen(s)).
  */
-int	ft_putstr_fd(char *s, int fd);
+int		ft_putstr_fd(char *s, int fd);
 
 /**
  * @brief Outputs the string ’s’ to the given file descriptor followed by a 
@@ -360,7 +360,7 @@ void	ft_putendl_fd(char *s, int fd);
  * @param fd The file descriptor on which to write.
  * @return int Returns the number of characters written.
  */
-int	ft_putnbr_fd(int n, int fd);
+int		ft_putnbr_fd(long n, int fd);
 
 /******************************************************************************/
 /* Bonus                                                                      */

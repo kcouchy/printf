@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   printf.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 10:54:35 by kcouchma          #+#    #+#             */
-/*   Updated: 2023/11/02 15:54:55 by kcouchma         ###   ########.fr       */
+/*   Updated: 2023/11/02 16:57:57 by kcouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
 
-#define LIBFTPRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <stdio.h>
@@ -34,6 +34,6 @@ int	ft_putbase(size_t n, char *base, int fd);
  * @param ... variadic input
  * @return int 
  */
-int	ft_printf(const char *, ...);
+int	ft_printf(const char *input, ...);
 
 #endif

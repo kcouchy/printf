@@ -6,28 +6,27 @@
 /*   By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:00:52 by kcouchma          #+#    #+#             */
-/*   Updated: 2023/11/02 15:56:35 by kcouchma         ###   ########.fr       */
+/*   Updated: 2023/11/02 16:39:09 by kcouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putnbr_fd(int n, int fd)
+int	ft_putnbr_fd(long n, int fd)
 {
 	char		c;
-	long		n_long;
-	static int	count;
+	int			count;
 
-	n_long = n;
-	if (n_long < 0)
+	count = 1;
+	if (n < 0)
 	{
 		write(fd, "-", 1);
-		n_long = -n_long;
+		n = -n;
+		count++;
 	}
-	if (n_long >= 10)
-		ft_putnbr_fd(n_long / 10, fd);
-	c = n_long % 10 + '0';
-	count++;
+	if (n >= 10)
+		count += ft_putnbr_fd(n / 10, fd);
+	c = n % 10 + '0';
 	write(fd, &c, 1);
 	return (count);
 }
