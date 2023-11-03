@@ -6,7 +6,7 @@
 /*   By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:45:14 by kcouchma          #+#    #+#             */
-/*   Updated: 2023/11/02 16:44:00 by kcouchma         ###   ########.fr       */
+/*   Updated: 2023/11/03 10:53:11 by kcouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -361,6 +361,14 @@ void	ft_putendl_fd(char *s, int fd);
  * @return int Returns the number of characters written.
  */
 int		ft_putnbr_fd(long n, int fd);
+
+/**
+ * @brief ft_putnbr to hex (or other) base
+ * @param n Input number to convert
+ * @param base Base as a string
+ * @param fd Output
+ */
+int		ft_putbase(size_t n, char *base, int fd);
 
 /******************************************************************************/
 /* Bonus                                                                      */

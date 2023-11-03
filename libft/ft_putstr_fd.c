@@ -6,7 +6,7 @@
 /*   By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 11:57:15 by kcouchma          #+#    #+#             */
-/*   Updated: 2023/11/02 15:13:31 by kcouchma         ###   ########.fr       */
+/*   Updated: 2023/11/03 12:02:39 by kcouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
-	return (ft_strlen(s));
+	return (write(fd, s, ft_strlen(s)));
 }

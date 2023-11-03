@@ -6,11 +6,11 @@
 /*   By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:28:26 by kcouchma          #+#    #+#             */
-/*   Updated: 2023/11/02 16:58:40 by kcouchma         ###   ########.fr       */
+/*   Updated: 2023/11/03 11:22:24 by kcouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_putbase(size_t n, char *base, int fd)
 {
@@ -20,7 +20,7 @@ int	ft_putbase(size_t n, char *base, int fd)
 
 	count = 1;
 	base_len = ft_strlen(base);
-	if (n > base_len)
+	if (n >= base_len)
 	{
 		count += ft_putbase(n / base_len, base, fd);
 	}

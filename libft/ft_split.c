@@ -6,15 +6,15 @@
 /*   By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 12:13:45 by kcouchma          #+#    #+#             */
-/*   Updated: 2023/10/30 12:22:17 by kcouchma         ###   ########.fr       */
+/*   Updated: 2023/11/03 10:10:04 by kcouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_words(char const *s, char c)
+int	ft_count_words(char const *s, char c)
 {
-	size_t	word_count;
+	int	word_count;
 
 	word_count = 0;
 	while (*s == c)
@@ -30,19 +30,27 @@ size_t	ft_count_words(char const *s, char c)
 	return (word_count);
 }
 
-char	**ft_split(char const *s, char c)
+int	ft_freetables(char **output, int i)
 {
-	char	**output;
-	size_t	word_count;
-	size_t	i;
+	int	j;
 
-	if (!s)
-		return (NULL);
-	word_count = (ft_count_words(s, c));
+	j = 0;
+	while (j <= i)
+	{
+		free(output[j]);
+		j++;
+	}
+	free(output);
+	return (0);
+}
+
+char	**ft_write_words(char const *s, char c, char **output, int word_count)
+{
+	int	i;
+	int	j;
+
 	i = 0;
-	output = (char **)malloc(sizeof(char *) * (word_count + 1));
-	if (!output)
-		return (NULL);
+	j = 0;
 	while (*s && i < word_count)
 	{
 		while (*s && *s == c)
@@ -50,6 +58,11 @@ char	**ft_split(char const *s, char c)
 		if (*s)
 		{
 			output[i] = ft_substr(s, 0, (ft_strchr(s, c) - s));
+			if (!output[i])
+			{
+				ft_freetables(output, i);
+				return (NULL);
+			}
 			i++;
 		}
 		while (*s && *s != c)
@@ -57,6 +70,22 @@ char	**ft_split(char const *s, char c)
 	}
 	output[i] = NULL;
 	return (output);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**output;
+	int		word_count;
+
+	if (!s)
+		return (NULL);
+	word_count = (ft_count_words(s, c));
+	output = (char **)malloc(sizeof(char *) * (word_count + 1));
+	if (!output)
+		return (NULL);
+	if (ft_write_words(s, c, output, word_count))
+		return (output);
+	return (NULL);
 }
 
 // int	main(void)

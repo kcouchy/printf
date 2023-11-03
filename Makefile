@@ -6,12 +6,11 @@
 #    By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/30 10:58:01 by kcouchma          #+#    #+#              #
-#    Updated: 2023/11/02 15:26:44 by kcouchma         ###   ########.fr        #
+#    Updated: 2023/11/03 10:46:43 by kcouchma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 	ft_printf \
-		ft_putbase
+SRCS = 	ft_printf
 
 SRC = $(addsuffix .c,$(SRCS))
 OBJ = $(addsuffix .o,$(SRCS))

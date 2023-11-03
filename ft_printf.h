@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 10:54:35 by kcouchma          #+#    #+#             */
-/*   Updated: 2023/11/02 16:57:57 by kcouchma         ###   ########.fr       */
+/*   Updated: 2023/11/03 11:06:51 by kcouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,6 @@
 # include <stdio.h>
 # include <unistd.h>
 # include "libft.h"
-
-/**
- * @brief ft_putnbr to hex (or other) base
- * @param n Input number to convert
- * @param base Base as a string
- * @param fd Output
- */
-int	ft_putbase(size_t n, char *base, int fd);
 
 /**
  * @brief Recode the printf() function from libc (man 3 printf).

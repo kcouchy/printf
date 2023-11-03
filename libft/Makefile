@@ -6,7 +6,7 @@
 #    By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:04:34 by kcouchma          #+#    #+#              #
-#    Updated: 2023/10/30 14:14:20 by kcouchma         ###   ########.fr        #
+#    Updated: 2023/11/03 10:46:52 by kcouchma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ BONUS_SRCS =					\
 				ft_lstclear		\
 				ft_lstiter		\
 				ft_lstmap		\
+				ft_putbase		\
 
 INC_FILES = libft.h
 
