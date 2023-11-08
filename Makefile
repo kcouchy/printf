@@ -6,7 +6,7 @@
 #    By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/30 10:58:01 by kcouchma          #+#    #+#              #
-#    Updated: 2023/11/03 10:46:43 by kcouchma         ###   ########.fr        #
+#    Updated: 2023/11/08 10:52:14 by kcouchma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ NAME = libftprintf.a
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	make -C libft
+	make -C libft bonus
 	cp libft/libft.a $(NAME)
 	ar -rcs $(NAME) $(OBJ)
 

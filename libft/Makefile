@@ -6,7 +6,7 @@
 #    By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:04:34 by kcouchma          #+#    #+#              #
-#    Updated: 2023/11/03 10:46:52 by kcouchma         ###   ########.fr        #
+#    Updated: 2023/11/08 11:02:54 by kcouchma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,14 @@ NAME = libft.a
 
 all: $(NAME)
 
-bonus : all
+$(NAME) : $(OBJ)
+	ar rcs $@ $^
+
+%.o: %.c
+	$(CC) -c $< -o $@ $(CCFLAGS)
+
+bonus : $(OBJ) $(BOBJ)
+	ar rcs $(NAME) $^
 
 clean :
 	rm -rf $(OBJ) $(BOBJ)
@@ -83,9 +90,3 @@ fclean : clean
 re : fclean all
 
 .PHONY : all bonus clean fclean re
-
-$(NAME) : $(OBJ) $(BOBJ)
-	ar rcs $@ $^
-
-%.o: %.c
-	$(CC) -c $< -o $@ $(CCFLAGS)

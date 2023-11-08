@@ -6,7 +6,7 @@
 /*   By: kcouchma <kcouchma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:19:27 by kcouchma          #+#    #+#             */
-/*   Updated: 2023/11/03 12:14:28 by kcouchma         ###   ########.fr       */
+/*   Updated: 2023/11/08 10:59:03 by kcouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,21 +78,22 @@ int	ft_printf(const char *input, ...)
 
 // int	main(void)
 // {
-// 	const char	printme[]="testtest";
-// 	const char	input[]="c = %c\ns = %s\np = %p\nd = %d\ni = %i\nu = %u\nx = %x
-// 	\nX = %X\npercent = %%";
-// 	const char	input[]="u = %u";
-// 	ft_printf(input, 'a', printme, printme, 5, -1234567, 1234567, 1234567, 
-// 	1234567);
-// 	printf(input, 'a', printme, printme, 5, -1234567, 1234567, 1234567, 
-// 	1234567);
-// 	printf("\n%d\n", ft_printf(input, 1234567));
-// 	printf("\n%d", printf(input, 1234567));
-// 	ft_printf(" NULL %s NULL ", (char *)NULL);
-// 	write(1, "\n", 1);
-// 	printf(" NULL %s NULL ", (char *)NULL);
-// 	ft_printf(" %p %p ", 0, 0);
-// 	write(1, "\n", 1);
-// 	printf(" %p %p ", (void *)0, (void *)0);
+// 	// const char	printme[]="testtest";
+// 	// const char	input[]="c = %c\ns = %s\np = %p\nd = %d\ni = %i\n
+// u = %u\nx = %x
+// 	// \nX = %X\npercent = %%";
+// 	// const char	input[]="p = %p";
+// 	// ft_printf(input, 'a', printme, printme, 5, -1234567, 1234567, 1234567, 
+// 	// 1234567);
+// 	// printf(input, 'a', printme, printme, 5, -1234567, 1234567, 1234567, 
+// 	// 1234567);
+// 	// printf("\nabc%pefe\n", (void *)0);
+// 	// printf("\n%d", printf(input, 1234567));
+// 	// ft_printf(" NULL %s NULL ", (char *)NULL);
+// 	// write(1, "\n", 1);
+// 	// printf(" NULL %s NULL ", (char *)NULL);
+// 	// ft_printf(" %p %p ", 0, 0);
+// 	// write(1, "\n", 1);
+// 	// printf(" %p %p ", (void *)0, (void *)0);
 // 	return (0);
 // }
