@@ -10,7 +10,7 @@ Implements the following conversions:
 
 • %s Prints a string (as defined by the common C convention).
 
-• %p The void * pointer argument has to be printed in hexadecimal format.
+• %p Prints a pointer (in hexadecimal format).
 
 • %d Prints a decimal (base 10) number.
 
